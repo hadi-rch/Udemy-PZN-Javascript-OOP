@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+{
+<!-- Membuat method di class sebenarnya bisa dilakukan dengan cara seperti menambahkan method di 
+constructor function
+Namun, hal tersebut sebenarnya menambahkan method ke dalam instance object
+Khusus untuk method sebaiknya kita menambahkan ke prototype, bukan ke instance object
+Untung nya di class, ada cara mudah menambahkan method dan secara otomatis ditambahkan ke 
+prototype -->
+}
+</head>
+<body>
+    <script>
+        class Person {
+            constructor(name) {
+                this.name = name;
+            }
+            sayHello(name) {
+                console.info(`Hi ${name}, my name is ${this.name}`);
+            }
+        }
+        const eko = new Person("eko");
+        console.info(eko);
+        const budi = new Person("budi");
+        console.info(budi);
+    </script>
+</body>
+</html>
